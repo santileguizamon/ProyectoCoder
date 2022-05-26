@@ -1,0 +1,121 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.footer {
+    background-color: black;
+    color: #f0f0e6;
+    position: static;
+    width: 100vw;
+    height: 7rem; 
+}
+.tarjetas {
+    width: 40vw;
+    border: rgb(31, 29, 29);
+    margin: 2rem;
+    border-radius: 5px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    background-color: black;
+    display: inline-block;
+    transition: heigth 2seg;
+    .tarjetas__img {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        background-color: black;
+    
+    }
+    
+    .tajetas__descripcion {
+        background-color: beige;
+        text-align: center;
+    
+    }
+    .tarjetas:hover {
+        width: 40rem;
+    }
+    
+}
+.container {
+    display: flexbox;
+    width: 50rem;
+    .img-thumbnail img-fluid {
+        width: 14vw;
+        height: auto;
+        margin: 0, 5rem;
+        padding: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+h5 {
+    display: flex;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: large;
+}
+
+h3 {
+    font-size: large;
+}
+
+h4 {
+    font-size: large;
+}
+h2{
+    padding: 10%;
+    margin: auto;
+}
+.formulario{
+    width: 40vw;
+    padding: 10%;
+    margin: auto;
+    .controls{
+        border: 2%;
+        padding: 5%;
+        margin: 5%;
+    }
+    .buton{
+        width: 20vw;
+        padding: 10%;
+        margin: auto;
+        color: black;
+    }
+}
+iframe {
+    padding: 3rem;
+    height: 20vw;
+}
+.texto{
+    padding: 10%;
+    margin: 10%;
+    background-color: #dfdfd7;
+    .texto h1{
+        font-size: larger;
+        margin: 2vw;
+    }
+    .texto img{
+        float: left;
+        width: 30vw;
+    }
+}
+$redes: (
+    twitter: #55acee,
+    facebook: #3a5795,
+    Instagram: #C25E30
+);
+@each $red,
+$color in $redes {
+    .nav-redesBtn--#{$red} {
+        background-color: $color;
+    }
+}
+
+@mixin sizes($width, $height) {
+    height: $height;
+    width: $width;
+}
