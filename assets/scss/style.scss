@@ -1,48 +1,60 @@
-*{
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300;700&display=swap');
+
 .footer {
     background-color: black;
     color: #f0f0e6;
     position: static;
     width: 100vw;
-    height: 7rem; 
+    height: 10rem;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
-.tarjetas {
-    width: 40vw;
-    border: rgb(31, 29, 29);
-    margin: 2rem;
-    border-radius: 5px;
-    border-color: black;
-    border-width: 2px;
-    border-style: solid;
-    background-color: black;
+.card{
     display: inline-block;
-    transition: heigth 2seg;
-    .tarjetas__img {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        background-color: black;
-    
-    }
-    
-    .tajetas__descripcion {
-        background-color: beige;
-        text-align: center;
-    
-    }
-    .tarjetas:hover {
-        width: 40rem;
-    }
-    
+    margin: 2rem;
+    border-radius: 2%;
+    width: 30rem;
 }
+// .tarjetas {
+//     width: 40vw;
+//     border: rgb(31, 29, 29);
+//     margin: 2rem;
+//     border-radius: 5px;
+//     border-color: black;
+//     border-width: 2px;
+//     border-style: solid;
+//     background-color: black;
+//     display: inline-block;
+//     transition: heigth 2seg;
+//     .tarjetas__img {
+//         width: 100%;
+//         margin-left: auto;
+//         margin-right: auto;
+//         display: block;
+//         background-color: black;
+
+//     }
+
+//     .tajetas__descripcion {
+//         background-color: beige;
+//         text-align: center;
+
+//     }
+//     .tarjetas:hover {
+//         width: 40rem;
+//     }
+
+// }
 .container {
     display: flexbox;
     width: 50rem;
+
     .img-thumbnail img-fluid {
         width: 14vw;
         height: auto;
@@ -52,62 +64,103 @@
         margin-right: auto;
     }
 }
+
 h5 {
     display: flex;
     text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: large;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    padding-left: 1%;
+    font-size: larger;
+}
+
+h6 {
+    display: flex;
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    padding-left: 2%;
+}
+
+h7 {
+    padding-left: 1%;
 }
 
 h3 {
     font-size: large;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 h4 {
-    font-size: large;
+    font-size: 2rem;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    padding: 2%;
+    margin: 1%;
 }
-h2{
-    padding: 10%;
-    margin: auto;
+
+h2 {
+    padding: 2%;
+    margin: 1%;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 3rem;
 }
-.formulario{
+
+.formulario {
     width: 40vw;
-    padding: 10%;
+    padding: 3rem;
     margin: auto;
-    .controls{
+    background-color: #3a5795;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+
+    .controls {
         border: 2%;
         padding: 5%;
         margin: 5%;
+        width: 100%;
+        border-radius: 2%;
     }
-    .buton{
+
+    .buton {
         width: 20vw;
         padding: 10%;
         margin: auto;
         color: black;
     }
 }
+
 iframe {
     padding: 3rem;
     height: 20vw;
+    width: 50vw;
 }
-.texto{
+
+.texto {
     padding: 10%;
-    margin: 10%;
+    margin: auto;
     background-color: #dfdfd7;
-    .texto h1{
-        font-size: larger;
+    width: fit-content;
+
+    .texto-titulo {
+        font-size: 4rem;
         margin: 2vw;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
     }
-    .texto img{
+
+    p {
+        font-size: larger;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+    }
+
+    .texto-img {
         float: left;
         width: 30vw;
     }
 }
+
 $redes: (
     twitter: #55acee,
     facebook: #3a5795,
     Instagram: #C25E30
 );
+
 @each $red,
 $color in $redes {
     .nav-redesBtn--#{$red} {
@@ -118,4 +171,88 @@ $color in $redes {
 @mixin sizes($width, $height) {
     height: $height;
     width: $width;
+}
+
+@media only screen and (min-width: 600px) {
+
+    iframe {
+        padding: 1rem;
+        height: 10vw;
+        width: 25vw;
+    }
+    .texto {
+        padding: 5%;
+        .texto-titulo {
+            font-size: 4rem;
+            margin: 2vw;
+        }
+        .texto-img {
+            width: 10vw;
+        }
+    }
+    .card{
+        margin: 1rem;
+        border-radius: 2%;
+        width: 15rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    iframe {
+        padding: 2rem;
+        height: 10vw;
+        width: 30vw;
+    }
+    .texto {
+        padding: 7%;
+        .texto-titulo {
+            font-size: 4rem;
+           margin: 1vw;
+        }
+        .texto-img {
+            width: 16vw;
+        }
+    }
+    .card{
+        display: inline-block;
+        margin: 1rem;
+        border-radius: 2%;
+        width: 20rem;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    iframe {
+        padding: 2rem;
+        height: 20vw;
+        width: 50vw;
+    }
+    .texto {
+        .texto-titulo {
+            margin: 1vw;
+
+        }
+        .texto-img {
+            width: 25vw;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    iframe {
+
+        height: 25vw;
+        width: 55vw;
+    }
+    .texto {
+        padding: 15%;
+        .texto-titulo {
+            font-size: 5rem;
+
+        }
+        .texto-img {
+
+            width: 35vw;
+        }
+    }
 }
